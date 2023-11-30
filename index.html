@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyPress</title>
+    <style>
+        h1{
+            font-size: 100px;
+            text-align: center;
+            color: #102B42;
+        }
+        .insert {
+            margin-left: 630px;
+        }
+
+        table{
+            font-size: 30px;
+            text-align: center;
+            width: 200px;
+            height: 100px;
+        }
+
+        t
+    </style>
+</head>
+
+<body>
+    <h1>KeyPress</h1>
+    <div class="insert">
+
+    </div>
+</body>
+<script>
+    const insert=document.querySelector('.insert');
+    window.addEventListener('keydown',function(e) {
+        insert.innerHTML=
+        `
+            <table border='1'>
+                <tr>
+                    <th>Key</th>
+                    <th>KeyCode</th>
+                </tr>
+
+                <tr>
+                    <td>${e.key}</td>
+                    <td>${e.keyCode}</td>
+
+                </tr>
+            </table>
+            
+        `;
+    });
+</script>
+
+</html>
